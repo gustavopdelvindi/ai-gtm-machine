@@ -22,3 +22,4 @@ __pycache__/
 
 # mapa da sua conta Nuvia (IDs)
 .claude/skills/nuvia-crm/references/conta-nuvia.md
+campaigns/vindi-pagamentos-teste/outbound/
