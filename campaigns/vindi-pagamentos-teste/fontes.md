@@ -2,51 +2,51 @@
 
 Status (2026-10-07): fontes por critério prontas (50 critérios de `filtros.md`). Concorrentes prontos, com a página de clientes verificada só em parte e nenhum post de maior engajamento verificado.
 
-Aviso de método: o catálogo de fontes abaixo vem de conhecimento geral, não de teste de cada fonte. Esforço é estimativa: Baixo (consulta direta ou API gratuita), Médio (login, limite de uso, scraping simples ou plano pago), Alto (captcha, anti-bot, risco de termos de uso ou processamento pesado). Antes de automatizar LinkedIn e Reclame Aqui, confira os termos de uso de cada um.
+Aviso de método: o catálogo de fontes abaixo vem de conhecimento geral, não de teste de cada fonte. Os nomes dos atores do Apify são tipos de ator a escolher na Apify Store (não testei nenhum), e cada execução custa crédito por item raspado. Esforço é estimativa: Baixo (consulta direta ou API gratuita), Médio (login, limite de uso, scraping simples ou plano pago), Alto (captcha, anti-bot, risco de termos de uso ou processamento pesado). Antes de automatizar LinkedIn e Reclame Aqui, confira os termos de uso de cada um.
 
 ## Catálogo de fontes
 
-| Cód. | Fonte | O que entrega | Esforço de extração |
-|---|---|---|---|
-| F01 | Receita Federal: consulta CNPJ | Situação, CNAE, porte, data de abertura, UF e endereço, capital social, quadro societário (QSA) | Médio: captcha na consulta manual |
-| F02 | APIs de CNPJ (BrasilAPI, CNPJ.ws) | Os mesmos dados da Receita, em JSON | Baixo: há limite de requisições |
-| F03 | Dados abertos de CNPJ (base completa da Receita) | Todas as empresas do país, filtráveis por CNAE, UF e data | Alto: arquivos grandes e processamento próprio, mas serve para lista em massa |
-| F04 | Portal do Simples Nacional | Opção pelo Simples e enquadramento MEI | Médio: consulta por CNPJ com captcha |
-| F05 | Site da empresa, inspeção manual | Oferta, público, rodapé, termos, página de carreiras, blog | Médio: leitura caso a caso |
-| F06 | Site da empresa, scraping (Firecrawl, Apify) | O mesmo conteúdo do F05, em escala e estruturado | Médio |
-| F07 | Páginas de planos, preços e checkout | Preços, parcelamento, assinatura, meios de pagamento | Médio: o checkout muitas vezes exige simular uma compra |
-| F08 | Google (operadores de busca, Trends) | Páginas, menções, interesse de busca ao longo do tempo, perfis via `site:linkedin.com/in` | Baixo |
-| F09 | Google Maps e avaliações | Existência de loja física, nota e texto de avaliações | Baixo a médio |
-| F10 | BuiltWith | Plataforma de e-commerce, gateway, ferramentas, histórico de adoção | Baixo: lista completa é paga |
-| F11 | Wappalyzer | Tecnologias do site (plataforma, pagamento, assinatura) | Baixo: extensão ou API |
-| F12 | SimilarWeb (gratuito) | Estimativa de tráfego e tendência | Baixo: sites pequenos podem não ter dado |
-| F13 | Semrush | Tráfego orgânico, palavras-chave, tendência | Médio: plano pago |
-| F14 | LinkedIn: página da empresa | Faixa de funcionários, setor, vagas, posts, pessoas por cargo | Médio: exige login |
-| F15 | LinkedIn: perfil da pessoa | Cargo, área, senioridade, datas de início, atividade e posts | Alto em escala: login, limites e risco de bloqueio |
-| F16 | LinkedIn Sales Navigator | Filtros por cargo, senioridade, função, tempo no cargo, atividade | Médio: plano pago |
-| F17 | LinkedIn Vagas | Vagas abertas por empresa e data | Baixo a médio |
-| F18 | Gupy, Vagas.com, Indeed | Vagas abertas e área | Baixo |
-| F19 | Reclame Aqui | Reclamações por tema (cobrança indevida, pagamento), nota, volume | Alto: anti-bot, volume exige scraping |
-| F20 | Consumidor.gov.br e Procon | Reclamações de consumo, por empresa | Médio |
-| F21 | Reddit (subreddits de empreendedorismo, e-commerce e programação em português) | Menções espontâneas de dor com gateway e adquirente | Médio: volume baixo, busca manual. Subreddits a confirmar |
-| F22 | Instagram, X e YouTube da empresa e do executivo | Lançamentos, promoções, parcelamento, posts sobre pagamentos | Médio |
-| F23 | Distrito, Crunchbase, ABStartups | Rodadas, investidores, lançamentos | Médio: dado completo costuma ser pago |
-| F24 | Imprensa de negócios (Valor, Exame, Pipeline) | Captações, aquisições, falências, lançamentos | Médio |
-| F25 | Tribunais de Justiça, Diário Oficial, Jusbrasil | Falência, recuperação judicial, processos | Alto: cada tribunal tem seu sistema, com captcha |
-| F26 | Banco Central: instituições autorizadas | Lista de instituições de pagamento e financeiras | Baixo: arquivo público |
-| F27 | GitHub | Repositórios da empresa e de seus devs | Baixo: API gratuita |
-| F28 | Hunter.io | E-mails públicos por domínio e padrão de e-mail | Baixo: plano gratuito limitado |
-| F29 | Verificação HTTP do domínio | Site no ar, redirecionamento, certificado | Baixo: um script simples |
-| F30 | Podcasts e eventos (Spotify, YouTube, sites de evento) | Participação da pessoa em painéis e entrevistas | Alto: busca manual por nome |
-| F31 | Meta Ad Library (biblioteca de anúncios) | Anúncios ativos, tempo de veiculação, ofertas e preços | Baixo: pública |
-| F32 | Glassdoor | Faixa de funcionários, vagas, avaliações | Médio |
-| F33 | Diretórios de e-commerce (ABComm, selos como Ebit) | Lojas associadas e selos | Médio: a confirmar disponibilidade |
-| F34 | CRM interno (Nuvia) e lista de supressão | Opt-out, comitê, histórico de contato | Baixo, mas interno (não é fonte pública) |
-| F35 | Conversa de qualificação (SDR) | Chargeback, alçada, champion, faturamento | Baixo, mas só depois do primeiro contato |
-| F36 | Apify (scrapers de LinkedIn, Reclame Aqui) | Automatiza F15 e F19 | Médio: custo por item, confira termos de uso |
-| F37 | Escavador | Perfil de empresa e de sócio, processos | Médio: parte é paga |
-| F38 | Diretórios de CNPJ (cnpj.biz, Casa dos Dados) | CNAE, sócios, data de abertura, com filtro por atividade | Baixo |
-| F40 | Ahrefs | Tráfego orgânico e tendência | Médio: plano pago |
+| Cód. | Fonte | O que entrega | Como extrair | Esforço de extração |
+|---|---|---|---|---|
+| F01 | Receita Federal: consulta CNPJ | Situação, CNAE, porte, data de abertura, UF e endereço, capital social, quadro societário (QSA) | Manual (captcha). Para volume, use F02 ou F03 | Médio: captcha na consulta manual |
+| F02 | APIs de CNPJ (BrasilAPI, CNPJ.ws) | Os mesmos dados da Receita, em JSON | API direta por HTTP, sem Apify | Baixo: há limite de requisições |
+| F03 | Dados abertos de CNPJ (base completa da Receita) | Todas as empresas do país, filtráveis por CNAE, UF e data | Download do arquivo e script próprio | Alto: arquivos grandes e processamento próprio, mas serve para lista em massa |
+| F04 | Portal do Simples Nacional | Opção pelo Simples e enquadramento MEI | Manual | Médio: consulta por CNPJ com captcha |
+| F05 | Site da empresa, inspeção manual | Oferta, público, rodapé, termos, página de carreiras, blog | Manual | Médio: leitura caso a caso |
+| F06 | Site da empresa, scraping (Firecrawl, Apify) | O mesmo conteúdo do F05, em escala e estruturado | Firecrawl | Médio |
+| F07 | Páginas de planos, preços e checkout | Preços, parcelamento, assinatura, meios de pagamento | Manual no checkout; Firecrawl nas páginas de preço | Médio: o checkout muitas vezes exige simular uma compra |
+| F08 | Google (operadores de busca, Trends) | Páginas, menções, interesse de busca ao longo do tempo, perfis via `site:linkedin.com/in` | Apify (ator de busca do Google) ou manual | Baixo |
+| F09 | Google Maps e avaliações | Existência de loja física, nota e texto de avaliações | Apify (ator do Google Maps) | Baixo a médio |
+| F10 | BuiltWith | Plataforma de e-commerce, gateway, ferramentas, histórico de adoção | Manual ou API paga | Baixo: lista completa é paga |
+| F11 | Wappalyzer | Tecnologias do site (plataforma, pagamento, assinatura) | Manual (extensão) ou API paga | Baixo: extensão ou API |
+| F12 | SimilarWeb (gratuito) | Estimativa de tráfego e tendência | Manual | Baixo: sites pequenos podem não ter dado |
+| F13 | Semrush | Tráfego orgânico, palavras-chave, tendência | Manual ou API paga | Médio: plano pago |
+| F14 | LinkedIn: página da empresa | Faixa de funcionários, setor, vagas, posts, pessoas por cargo | Apify (ator de empresas do LinkedIn) ou manual | Médio: exige login |
+| F15 | LinkedIn: perfil da pessoa | Cargo, área, senioridade, datas de início, atividade e posts | Apify (ator de perfis do LinkedIn) ou manual | Alto em escala: login, limites e risco de bloqueio |
+| F16 | LinkedIn Sales Navigator | Filtros por cargo, senioridade, função, tempo no cargo, atividade | Manual (exportação limitada) | Médio: plano pago |
+| F17 | LinkedIn Vagas | Vagas abertas por empresa e data | Apify (ator de vagas do LinkedIn) ou manual | Baixo a médio |
+| F18 | Gupy, Vagas.com, Indeed | Vagas abertas e área | Firecrawl ou manual | Baixo |
+| F19 | Reclame Aqui | Reclamações por tema (cobrança indevida, pagamento), nota, volume | Apify (ator do Reclame Aqui) ou manual | Alto: anti-bot, volume exige scraping |
+| F20 | Consumidor.gov.br e Procon | Reclamações de consumo, por empresa | Firecrawl ou manual | Médio |
+| F21 | Reddit (subreddits de empreendedorismo, e-commerce e programação em português) | Menções espontâneas de dor com gateway e adquirente | Apify (ator do Reddit) | Médio: volume baixo, busca manual. Subreddits a confirmar |
+| F22 | Instagram, X e YouTube da empresa e do executivo | Lançamentos, promoções, parcelamento, posts sobre pagamentos | Apify (atores de Instagram, X e YouTube) | Médio |
+| F23 | Distrito, Crunchbase, ABStartups | Rodadas, investidores, lançamentos | Manual; Firecrawl nas páginas públicas | Médio: dado completo costuma ser pago |
+| F24 | Imprensa de negócios (Valor, Exame, Pipeline) | Captações, aquisições, falências, lançamentos | Firecrawl ou manual | Médio |
+| F25 | Tribunais de Justiça, Diário Oficial, Jusbrasil | Falência, recuperação judicial, processos | Manual | Alto: cada tribunal tem seu sistema, com captcha |
+| F26 | Banco Central: instituições autorizadas | Lista de instituições de pagamento e financeiras | Download do arquivo | Baixo: arquivo público |
+| F27 | GitHub | Repositórios da empresa e de seus devs | API do GitHub por HTTP | Baixo: API gratuita |
+| F28 | Hunter.io | E-mails públicos por domínio e padrão de e-mail | API do Hunter por HTTP | Baixo: plano gratuito limitado |
+| F29 | Verificação HTTP do domínio | Site no ar, redirecionamento, certificado | Script (curl) | Baixo: um script simples |
+| F30 | Podcasts e eventos (Spotify, YouTube, sites de evento) | Participação da pessoa em painéis e entrevistas | Manual | Alto: busca manual por nome |
+| F31 | Meta Ad Library (biblioteca de anúncios) | Anúncios ativos, tempo de veiculação, ofertas e preços | Apify (ator da biblioteca de anúncios) ou manual | Baixo: pública |
+| F32 | Glassdoor | Faixa de funcionários, vagas, avaliações | Apify ou manual | Médio |
+| F33 | Diretórios de e-commerce (ABComm, selos como Ebit) | Lojas associadas e selos | Firecrawl ou manual | Médio: a confirmar disponibilidade |
+| F34 | CRM interno (Nuvia) e lista de supressão | Opt-out, comitê, histórico de contato | Interno (Nuvia) | Baixo, mas interno (não é fonte pública) |
+| F35 | Conversa de qualificação (SDR) | Chargeback, alçada, champion, faturamento | Manual (conversa) | Baixo, mas só depois do primeiro contato |
+| F36 | Apify (scrapers de LinkedIn, Reclame Aqui) | Automatiza F15 e F19 | É a própria ferramenta | Médio: custo por item, confira termos de uso |
+| F37 | Escavador | Perfil de empresa e de sócio, processos | Manual | Médio: parte é paga |
+| F38 | Diretórios de CNPJ (cnpj.biz, Casa dos Dados) | CNAE, sócios, data de abertura, com filtro por atividade | Firecrawl ou manual | Baixo |
+| F40 | Ahrefs | Tráfego orgânico e tendência | Manual ou API paga | Médio: plano pago |
 
 ## Fontes por critério (as 5 melhores, em ordem)
 
@@ -132,13 +132,13 @@ Aviso de método: o catálogo de fontes abaixo vem de conhecimento geral, não d
 
 Os 3 maiores (informados): Asaas, Pagar.me, Cielo. Os 7 adicionados por mim (pagamentos e cobrança recorrente no Brasil): Iugu, Mercado Pago, Stone, PagSeguro (PagBank), Efí (ex-Gerencianet), Getnet, Rede.
 
-Pesquisa feita em 07/10/2026 por busca web. O LinkedIn exige login, então nenhum post de maior engajamento foi verificado. Instagram e X não foram tentados.
+Páginas de clientes: busca web de 07/10/2026. Posts: raspagem do LinkedIn em 12/10/2026 com o ator `harvestapi/linkedin-company-posts` (Apify), 20 posts por página, critério reações + comentários. "Maior engajamento" vale só para essa janela dos 20 posts mais recentes, não para todo o histórico. Posts de Mercado Pago, Stone, PagBank, Efí, Getnet, Iugu e Rede não foram raspados. Instagram e X não foram tentados.
 
 | # | Concorrente | Página de clientes | Status | Post de maior engajamento |
 |---|---|---|---|---|
-| 1 | Asaas | https://blog.asaas.com/case/ (hub de cases no blog; casos: Tiflux, Multipedidos, OSTEC, Projuris, CEAB) | Só por busca, acesso direto deu 403. `asaas.com/clientes` leva ao login, não é página de clientes | Não verificado. Perfil: https://www.linkedin.com/company/asaasbrasil |
-| 2 | Pagar.me | https://www.pagar.me/clientes | Verificada. Só faixa de logos (Usaflex, Leroy Merlin, Casa Vídeo, Polishop, Alipay), sem cases. O site diz que Pagar.me agora é Stone | Não verificado. O perfil oficial pode ser o da Stone |
-| 3 | Cielo | https://blog.cielo.com.br/historias-de-clientes/ (cases: Lojas MM, Buzz Editora, Postos Tulio) | Verificada. Não há página de clientes no site institucional | Não verificado |
+| 1 | Asaas | https://blog.asaas.com/case/ (hub de cases no blog; casos: Tiflux, Multipedidos, OSTEC, Projuris, CEAB) | Só por busca, acesso direto deu 403. `asaas.com/clientes` leva ao login, não é página de clientes | Maior entre os 20 posts mais recentes (18/09 a 09/10/2026): 334 reações, 25 comentários, 18 compartilhamentos, 23/09/2026, vaga de emprego (https://www.linkedin.com/posts/asaasbrasil_escreva-o-pr%C3%B3ximo-cap%C3%ADtulo-da-sua-carreira-activity-7508540857218707458-_j8b) |
+| 2 | Pagar.me | https://www.pagar.me/clientes | Verificada. Só faixa de logos (Usaflex, Leroy Merlin, Casa Vídeo, Polishop, Alipay), sem cases. O site diz que Pagar.me agora é Stone | Não obtido: a URL linkedin.com/company/pagarme/ retornou 0 posts (URL errada ou a marca migrou para a Stone) |
+| 3 | Cielo | https://blog.cielo.com.br/historias-de-clientes/ (cases: Lojas MM, Buzz Editora, Postos Tulio) | Verificada. Não há página de clientes no site institucional | Maior entre os 20 posts mais recentes (04/09 a 09/10/2026): 497 reações, 73 comentários, 61 compartilhamentos, 07/10/2026, ranking GPTW (https://www.linkedin.com/posts/cielo_cielo-gptw-melhoresempresasparatrabalhar-activity-7513593298180259840-bmeb) |
 | 4 | Iugu | https://www.iugu.com/cases (Clinicorp, Ballroom, Suprijá by Suzano, Ingresso Prime, PEBMED) | Verificada. Melhor prova social do grupo, com métricas dos próprios cases. `/clientes` dá 404 | Não verificado |
 | 5 | Mercado Pago | Não encontrada | Só um case isolado e antigo (Eros Espaço Psicoterapêutico), não confirmado. `empresas.mercadopago.com.br` deu 403 | Não verificado |
 | 6 | Stone | Não encontrada | `stone.com.br/cases/` devolve a home, sem cases | Não verificado. Perfil: https://www.linkedin.com/company/stone-pagamentos/ |
